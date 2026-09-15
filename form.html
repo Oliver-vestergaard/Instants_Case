@@ -54,19 +54,19 @@
     <main>
 
         <h1>
-            Del dine instants?
+            Del dine instants
         </h1>
 
 
         <div class="info">
-            <p>Klar til at dele dit instant foto? <br>Sådan deltage du!</p>
+            <p>Klar til at dele dit instant foto? <br>Sådan deltager du!</p>
             <ol class="info_list">
                 <li>Tag et billede af dit instant foto med din smartphone (eller scan det for den bedste kvalitet) -
                     filen skal være mellem
                     2-10 MB, i jpg/jpeg- eller webp-format.</li>
                 <li>Upload dit billede og dit navn + kontaktinfo på </li>
                 <li>Accepter vilkår og betingelser for konkurrencen <br>
-                    Den korte version: Deltagere skal være over 18 år,
+                    Den korte version: Deltagere skal være <span class="BoldText">over 18 år</span>,
                     portrætterede personer skal have givet
                     samtykke, og du
                     accepterer, at dit instant foto må udstilles og bruges til at promovere fotokonkurrencen.</li>
@@ -79,7 +79,7 @@
 
 
 
-        <form class="form">
+        <form class="form" id="contributionForm">
             <div class="formHeadline">
                 <h3>Del dit Instant</h3>
                 <p class="Italic-Text">Deadline: 11. okt</p>
@@ -120,12 +120,66 @@
                 <textarea id="description" placeholder="Kort beskrivelse af dit billede"></textarea>
             </div>
 
+
+
+            <label class="Form_Checkbox">
+                <input type="checkbox" name="terms" required>
+                Jeg har læst og accepteret
+                <a href="agreements.html" target="_blank" rel="noopener noreferrer">
+                    vilkår og betingelser
+                </a>
+
+            </label>
+
             <button class="submit-button" type="submit">SEND →</button>
 
 
 
         </form>
 
+
+
+
+
+
+
+        <!-- OVERLAY -->
+        <div class="overlay-background" id="overlayBackground">
+
+            <div class="overlay" id="IDOverlay">
+
+                <div class="Overlay_content">
+                    <h1>Tak!</h1>
+
+                    <p>
+                        Du er en instant champ! <br>Tak for bidraget :-)
+                    </p>
+
+                    <p>
+                        Konkurrencen løber indtil den søndag d. 5. april,
+                        kort efter gennemgår vi alle billederne og annoncerer
+                        en vinder den 1. maj.
+                    </p>
+
+                    <p>
+                        Hvis du er en af de heldige vindere eller nominerede,
+                        kontakter vi dig via e-mail.
+                    </p>
+
+                    <p>Held og lykke!</p>
+
+                    <p>NB! Vil du indsende endnu et bidrag?</p>
+
+                    <button type="button" id="closeThankYou">
+                        JA TAK
+                    </button>
+                </div>
+
+                <img class="thank-you-camera" src="Img/Form_Overlay_camera2.webp" alt="">
+
+            </div>
+
+        </div>
 
 
     </main>
@@ -159,6 +213,7 @@
         </div>
     </footer>
     <script src="javascript/burger.js"></script>
+    <script src="javascript/form.js"></script>
 </body>
 
 </html>
