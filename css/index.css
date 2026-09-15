@@ -90,10 +90,30 @@ a {
 
 .timeline {
   background-image: url(/Img/Backgrounds/bg_textured_overlay.webp);
+  display: flex;
+  flex-direction: column;
+  gap: var(--M);
+  padding-block: var(--M);
+}
+
+.timeline_intro,
+.timeline_outro {
+  max-width: 65ch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--XS);
+}
+
+.timeline_outro {
+  margin-top: var(--S);
 }
 
 .timeline_wrapper img {
   padding: 0 var(--XL);
+  position: relative;
+}
+
+.timeline_wrapper {
   position: relative;
 }
 
@@ -129,10 +149,124 @@ a {
   flex-direction: column;
   align-self: flex-start;
 }
+
+@media (max-width: 800px) {
+  .timeline_wrapper img {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+
+  .timeline_grid {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .timeline_grid .info1,
+  .timeline_grid .info2,
+  .timeline_grid .info3,
+  .timeline_grid .info4 {
+    position: absolute;
+    width: 30%;
+  }
+
+  .timeline_grid .info1 {
+    top: 8%;
+    right: 2%;
+  }
+
+  .timeline_grid .info2 {
+    top: 22%;
+    left: 4%;
+  }
+
+  .timeline_grid .info3 {
+    top: 62%;
+    right: 5%;
+  }
+
+  .timeline_grid .info4 {
+    top: 88%;
+    left: 4%;
+  }
+}
 /* 
 ------------------------ BREAKPOINT ------------------------ */
 
 @media (min-width: 801px) {
+  .timeline {
+    padding: var(--L) 65px;
+  }
+
+  .timeline_intro {
+    width: 50%;
+    max-width: none;
+    margin-left: 50%;
+    transform: none;
+  }
+
+  .timeline_wrapper {
+    height: 55rem;
+    width: calc(100% + 130px);
+    margin: var(--M) -65px;
+    overflow: visible;
+  }
+
+  .timeline_wrapper img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: auto;
+    transform: rotate(105deg) scale(0.28);
+  }
+
+  .timeline_grid {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .timeline_grid .info1,
+  .timeline_grid .info2,
+  .timeline_grid .info3,
+  .timeline_grid .info4 {
+    position: absolute;
+    width: 18%;
+  }
+
+  .timeline_grid .info1 {
+    top: 0%;
+    left: 65px;
+  }
+
+  .timeline_grid .info2 {
+    bottom: 35%;
+    left: 25%;
+  }
+
+  .timeline_grid .info3 {
+    top: 35%;
+    right: 22%;
+  }
+
+  .timeline_grid .info4 {
+    bottom: 5%;
+    right: 5%;
+  }
+
+  .timeline_outro {
+    width: 50%;
+    max-width: none;
+    margin-left: 0;
+  }
+
   .hero {
     display: grid;
     grid-template-columns: 3fr 1fr;
