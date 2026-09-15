@@ -2,6 +2,7 @@
   --XS: 1.25rem;
   --S: 1.875rem;
   --M: 3.125rem;
+  --L: 6.875rem;
 }
 
 .hero_images {
@@ -37,6 +38,7 @@ a {
 .hero_text_button {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: var(--S);
 }
 
@@ -44,17 +46,61 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin: 0 20px;
+  margin: 0 var(--S);
 }
+
+/* -------------- WHAT IS INSTANT UGEN? ---------------- */
+
+.what_is_flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--S);
+  margin: var(--M) var(--S);
+}
+
+.burgerking {
+  width: 100%;
+}
+
+/* ------------ TIMELINE ----------- */
+
+.timeline {
+  background-image: url(/Img/Backgrounds/bg_textured_overlay.webp);
+}
+
+/* 
+------------------------ BREAKPOINT ------------------------ */
 
 @media (min-width: 801px) {
   .hero {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    margin: 0 65px;
+  }
+
+  .hero_images {
+    grid-column: 1;
+    grid-row: span 2;
+  }
+
+  .hero_text_button {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .what_is_flex {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    margin: var(--L) 65px;
+  }
 
-    margin: 0 65px;
+  .what_is_text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--S);
+    order: -1;
   }
 }
