@@ -27,12 +27,23 @@ h1 {
 .form {
   width: 100%;
   max-width: 1050px;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Karla", sans-serif;
   background-color: transparent;
   margin-top: 5rem;
   margin: 0 auto;
   margin-bottom: 10rem;
-  color: #e6e5b5;
+  color: var(--Yellow-color);
+}
+
+form input,
+form textarea,
+form button,
+form label {
+  font-family: inherit;
+}
+
+.BoldText {
+  font-weight: bold;
 }
 
 .formHeadline {
@@ -45,13 +56,15 @@ h1 {
 
 .field {
   padding: 8px 12px 45px;
-  border-top: 1px solid #e6e5b5;
+  border-top: 1px solid var(--Yellow-color);
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
 
 label {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-weight: bold;
   font-size: 14px;
   margin-bottom: 14px;
@@ -62,13 +75,18 @@ input {
   border: none;
   outline: none;
   background: transparent;
-
   font-family: inherit;
   font-size: 16px;
+  color: var(--text-color);
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin: 0;
 }
 
 input::placeholder {
-  color: #e6e5b5;
+  color: var(--Yellow-color);
   font-weight: 100;
   opacity: 50%;
 }
@@ -118,23 +136,68 @@ input:focus {
 }
 
 textarea {
-  width: 100%;
+  width: 50%;
   min-height: 130px;
   resize: vertical;
 
-  outline: 1px solid var(--text-color);
+  outline: 1px solid var(--Yellow-color);
   background: transparent;
-  color: #e6e5b5;
+  color: var(--Yellow-color);
   margin-top: -45px;
 }
 
 textarea::placeholder {
-  color: #e6e5b5;
+  color: var(--Yellow-color);
   font-weight: 100;
 }
 
 .description {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+/******* OVERLAY ********/
+
+.overlay-background {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: translateY(-100%);
+  transition: transform 0.8s ease-in-out;
+}
+
+.overlay-background.active {
+  transform: translateY(0);
+}
+
+.overlay {
+  align-items: center;
+  background-image: url(../Img/Backgrounds/takfordeltagelse.webp);
+  background-size: cover;
+  padding: 2rem 0 2rem 2rem;
+}
+
+.overlay img {
+  display: none;
+}
+
+.overlay h1 {
+  margin-top: 0;
+}
+
+.Overlay_content p {
+  margin-bottom: 0.5rem;
+}
+
+#closeThankYou {
+  padding: 10px 50px 10px 50px;
+  background-color: var(--Yellow-color);
+  border: none;
+  border-radius: 10px;
 }
 
 /********** DESKTOP **********/
@@ -142,13 +205,20 @@ textarea::placeholder {
   .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-top: 1px solid #e6e5b5;
+    border-top: 1px solid var(--Yellow-color);
   }
 
   .field + .field {
-    border-left: 1px solid #e6e5b5;
+    border-left: 1px solid var(--Yellow-color);
   }
 
+  .Form_Checkbox a {
+    font-size: 14px;
+  }
+
+  .Form_Checkbox {
+    padding-left: 12px;
+  }
   /****** TEXT *****/
 
   h1 {
@@ -167,5 +237,24 @@ textarea::placeholder {
 
   .info_list li {
     margin-bottom: 1rem;
+  }
+  /*********** OVERLAY ***********/
+  .overlay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75%;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .overlay img {
+    display: block;
+    width: 85%;
+    height: auto;
+    justify-self: end;
+  }
+
+  .Overlay_content {
+    transform: translateY(-20px);
   }
 }
