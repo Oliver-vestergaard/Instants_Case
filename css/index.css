@@ -15,6 +15,11 @@
   background-image: url("/Img/Backgrounds/bg_hero.webp");
 }
 
+header {
+  position: relative;
+  z-index: 100;
+}
+
 /* ----------CTA------------- */
 
 a {
@@ -24,7 +29,7 @@ a {
 }
 
 .button {
-  background-color: var(--cta-color);
+  background-color: var(--Yellow-color);
   color: var(--background-color);
   border-radius: 10px;
   padding: 1.25rem 4rem;
@@ -47,12 +52,14 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 var(--S);
+  margin: -100px var(--S) 0;
+  gap: var(--M);
 }
 
 /* -------------- WHAT IS INSTANT UGEN? ---------------- */
 
 .what_is_flex {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,6 +69,21 @@ a {
 
 .burgerking {
   width: 100%;
+  transform: rotate(-10deg);
+}
+
+.what_is_images {
+  position: relative;
+  width: 100%;
+}
+
+.metro_tilt_ovenpå {
+  position: absolute;
+  z-index: 1;
+  width: 25%;
+  top: 8%;
+  left: 18%;
+  transform: translateX(-90px);
 }
 
 /* ------------ TIMELINE ----------- */
@@ -116,23 +138,34 @@ a {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
-    margin: 0 65px;
+    margin: -120px 65px 0;
   }
 
   .hero_images {
     grid-column: 1;
     grid-row: span 2;
+    align-self: start;
   }
 
   .hero_text_button {
     grid-column: 2;
     grid-row: 2;
+    margin-left: -10rem;
   }
 
   .what_is_flex {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     margin: var(--L) 65px;
+  }
+
+  .what_is_images {
+    grid-column: 2;
+    overflow: visible;
+  }
+
+  .metro_tilt_ovenpå {
+    transform: translateX(-100px);
   }
 
   .what_is_text {
