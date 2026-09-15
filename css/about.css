@@ -1,0 +1,128 @@
+/*********** INFO TEXT *************/
+
+.Dommerne {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/*********** FRIDGE *********/
+.Fridge {
+  position: relative;
+  width: 100%;
+}
+
+.FridgeBackground {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.FridgeContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.FridgeJudge {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0rem 1rem 3rem 1rem;
+}
+
+.FridgeJudge img {
+  width: 145px;
+}
+
+.FridgeContent {
+  padding: 1rem;
+}
+
+.JudgeImg1 {
+  transform: rotate(12deg);
+}
+
+.JudgeImg2 {
+  transform: rotate(-6deg);
+}
+.JudgeImg3 {
+  transform: rotate(8deg);
+}
+.JudgeImg4 {
+  transform: rotate(-3deg);
+}
+.JudgeImg5 {
+  transform: rotate(13deg);
+}
+
+.JudgeImg2,
+.JudgeImg4 {
+  justify-self: end;
+}
+
+/********* SPONSOR ************/
+.sponsor {
+  margin-top: 2rem;
+  margin-left: 10px;
+}
+
+.Sponsorlogo {
+  width: 100px;
+  margin-top: 1rem;
+}
+
+.SponsorText {
+  color: var(--Yellow-color);
+  font-weight: bold;
+}
+
+/********** DESKTOP **********/
+@media (min-width: 801px) {
+  .Fridge {
+    width: 100%;
+  }
+
+  .FridgeContent {
+    margin-top: 15rem;
+  }
+
+  .FridgeJudge {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .FridgeJudge img {
+    width: 100%;
+    width: 400px;
+    height: auto;
+  }
+
+  .FridgeJudge p {
+    font-size: 2.25rem;
+  }
+
+  /* Række 1, 3, 5 */
+  .FridgeJudge:nth-child(odd) p {
+    grid-column: 2;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .FridgeJudge:nth-child(odd) img {
+    grid-column: 1;
+  }
+
+  /* Række 2, 4 */
+  .FridgeJudge:nth-child(even) p {
+    grid-column: 2;
+    justify-self: end;
+    text-align: right;
+  }
+
+  .FridgeJudge:nth-child(even) img {
+    grid-column: 3;
+    justify-self: end;
+  }
+}
