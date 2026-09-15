@@ -178,7 +178,7 @@ textarea::placeholder {
   align-items: center;
   background-image: url(../Img/Backgrounds/takfordeltagelse.webp);
   background-size: cover;
-  padding: 2rem 0 2rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
 }
 
 .overlay img {
@@ -245,6 +245,7 @@ textarea::placeholder {
     width: 75%;
     margin: 0 auto;
     align-items: center;
+    padding: 2rem 0rem 2rem 2rem;
   }
 
   .overlay img {

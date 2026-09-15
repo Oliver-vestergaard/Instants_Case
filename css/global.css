@@ -57,7 +57,7 @@ button {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 p,
@@ -75,6 +75,10 @@ a {
 p {
   max-width: 65ch;
   line-height: 1.6;
+}
+
+li {
+  max-width: 65ch;
 }
 
 .Italic-Text {
@@ -275,11 +279,11 @@ footer {
 @media (min-width: 801px) {
   /****** FONT ******/
   h1 {
-    font-size: 4.75rem;
+    font-size: 4rem;
   }
 
   h2 {
-    font-size: 3.625rem;
+    font-size: 3rem;
   }
 
   h3 {
@@ -290,11 +294,11 @@ footer {
   ul,
   ol,
   a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   button {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 
   /*************** MENU *****************/
