@@ -1,0 +1,128 @@
+body {
+  background-size: cover;
+  background-image: url(../Img/Backgrounds/deldineinstantsbg.webp);
+}
+/* Generel styling */
+.nominerede_card {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+  row-gap: 1em;
+}
+.name {
+  font-style: italic;
+}
+.winner_section {
+  margin-top: 3rem;
+  .winner_card {
+    margin-top: 1.5em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .nominerede_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5em;
+    row-gap: 1.5em;
+    margin-top: 3rem;
+
+    h2 {
+      grid-column: 1/-1;
+    }
+  }
+  .winner_card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    row-gap: 1.5em;
+  }
+
+  .info_text {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+
+  .winner_card h1 {
+    order: 2;
+  }
+
+  .winner_card h3 {
+    order: 3;
+  }
+
+  .winner_card .name {
+    order: 4;
+  }
+
+  .winner_card img {
+    order: 5;
+  }
+
+  .winner_card > p:last-child {
+    order: 6;
+  }
+}
+
+/* Desktop */
+@media (min-width: 801px) {
+  main {
+    padding-right: 2rem;
+    padding-left: 2em;
+  }
+  .nominerede_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.5em;
+    row-gap: 1.5em;
+    margin-top: 5rem;
+
+    h2 {
+      grid-column: 1/-1;
+      margin-bottom: 2rem;
+    }
+  }
+  .winner_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+
+    grid-template-areas:
+      "title title"
+      "image info"
+      "image winner-title"
+      "image name"
+      "image description";
+  }
+
+  .winner_card h1 {
+    grid-area: title;
+    margin-bottom: 1.5rem;
+  }
+
+  .winner_card .info_text {
+    grid-area: info;
+    padding: 0;
+  }
+
+  .winner_card img {
+    grid-area: image;
+    width: 100%;
+  }
+
+  .winner_card h3 {
+    grid-area: winner-title;
+    margin: 0;
+  }
+
+  .winner_card .name {
+    grid-area: name;
+    margin: 5px 0 25px;
+  }
+
+  .winner_card > p:last-child {
+    grid-area: description;
+    margin: 0;
+  }
+}
