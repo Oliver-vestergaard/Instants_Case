@@ -12,7 +12,7 @@
 }
 
 .hero_background {
-  background-image: url("/Img/Backgrounds/bg_hero.webp");
+  background-image: url("../Img/Backgrounds/bg_hero.webp");
 }
 
 header {
