@@ -187,6 +187,83 @@ a {
   }
 }
 
+/* ------------------- HOW TO DELTAGE ------------ */
+
+.how_to_section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: var(--M) 0 var(--XL) 0;
+}
+
+.how_to_section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("../Img/Backgrounds/bg_how_to.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.how_to_section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.h2_howto {
+  color: var(--Yellow-color);
+  margin-bottom: var(--M);
+}
+.note {
+  max-width: 500px;
+  min-height: 200px;
+  padding: 35px 40px;
+  background-color: #f7f2e8;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 31px,
+    #b8c7d1 32px
+  );
+  box-sizing: border-box;
+}
+
+.note p {
+  margin: 0;
+  color: var(--background-color);
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 2rem;
+}
+
+.howtobtn {
+  padding: var(--M) 0;
+}
+
+.howto_bigflex {
+  display: flex;
+  flex-direction: column;
+  gap: var(--XS);
+  padding: var(--L) var(--S);
+}
+
+.howto_smallflex {
+  display: flex;
+  flex-direction: column;
+  gap: var(--M);
+}
+
+.howtobtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ------------------- MOBILE BREAKPOINT --------------- */
+
 @media (max-width: 800px) {
   .timeline_intro,
   .timeline_outro {
@@ -241,7 +318,7 @@ a {
   }
 }
 /* 
------------------------- BREAKPOINT ------------------------ */
+------------------------ DESKTOP BREAKPOINT ------------------------ */
 
 @media (min-width: 801px) {
   .timeline {
@@ -359,6 +436,10 @@ a {
     order: -1;
   }
 
+  .howto_bigflex {
+    padding-inline: 65px;
+  }
+
   .infographics_index {
     display: flex;
     flex-direction: row;
@@ -379,5 +460,11 @@ a {
 
   .infographic_1 {
     margin-top: var(--L);
+  }
+
+  .howto_smallflex {
+    display: flex;
+    flex-direction: row;
+    gap: var(--M);
   }
 }
