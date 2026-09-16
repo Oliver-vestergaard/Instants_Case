@@ -12,7 +12,11 @@
 }
 
 .hero_background {
+  display: flow-root;
   background-image: url("../Img/Backgrounds/bg_hero.webp");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 header {
@@ -89,7 +93,7 @@ a {
 /* ------------ TIMELINE ----------- */
 
 .timeline {
-  background-image: url(/Img/Backgrounds/bg_textured_overlay.webp);
+  background-image: url("../Img/Backgrounds/bg_textured_overlay.webp");
   display: flex;
   flex-direction: column;
   gap: var(--M);
