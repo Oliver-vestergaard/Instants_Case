@@ -190,20 +190,36 @@ a {
 /* ------------------- HOW TO DELTAGE ------------ */
 
 .how_to_section {
+  position: relative;
   min-height: 100vh;
+  overflow: hidden;
+  padding: var(--M) 0 var(--XL) 0;
+}
+
+.how_to_section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   background-image: url("../Img/Backgrounds/bg_how_to.webp");
-  background: opacity 50%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.how_to_section > * {
+  position: relative;
+  z-index: 1;
 }
 
 .h2_howto {
   color: var(--Yellow-color);
+  margin-bottom: var(--M);
 }
 .note {
   max-width: 500px;
-  min-height: 250px;
+  min-height: 200px;
   padding: 35px 40px;
   background-color: #f7f2e8;
   background-image: repeating-linear-gradient(
