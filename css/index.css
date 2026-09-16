@@ -94,6 +94,7 @@ a {
   flex-direction: column;
   gap: var(--M);
   padding-block: var(--M);
+  overflow-x: hidden;
 }
 
 .timeline_intro,
@@ -218,7 +219,7 @@ a {
   .timeline_wrapper img {
     position: absolute;
     inset: 0;
-    width: 100%;
+    width: 100vw;
     height: auto;
     padding: 0;
     margin: auto;
