@@ -269,9 +269,23 @@ a {
   color: var(--text-color);
 }
 
+.file-link {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.file-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .yellowfile {
   z-index: 2;
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   width: 100%;
@@ -290,9 +304,9 @@ a {
 
 .redfile {
   z-index: 3;
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 80px;
+  top: 0;
   width: 100%;
   height: auto;
   transform-origin: center top;
@@ -309,9 +323,9 @@ a {
 
 .bluefile {
   z-index: 4;
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 160px;
+  top: 0;
   width: 100%;
   height: auto;
   transform-origin: center top;
@@ -328,9 +342,9 @@ a {
 
 .brownfile {
   z-index: 5;
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 240px;
+  top: 0;
   width: 100%;
   height: auto;
   transform-origin: center top;
