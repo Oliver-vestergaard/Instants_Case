@@ -193,7 +193,9 @@ a {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  padding: var(--M) 0 var(--XL) 0;
+  padding: var(--M) 0 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .how_to_section::before {
@@ -262,6 +264,17 @@ a {
   align-items: center;
 }
 
+.howto_images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.howto_images img {
+  display: block;
+  margin: 0 auto;
+}
+
 /* ----------- FILES ------------- */
 
 .files_title {
@@ -298,7 +311,7 @@ a {
 }
 
 .yellowfile:hover {
-  transform: translateY(-32px);
+  transform: translateY(-16px);
   filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.14));
 }
 
@@ -317,7 +330,7 @@ a {
 }
 
 .redfile:hover {
-  transform: translateY(-32px);
+  transform: translateY(-16px);
   filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.14));
 }
 
@@ -336,7 +349,7 @@ a {
 }
 
 .bluefile:hover {
-  transform: translateY(-32px);
+  transform: translateY(-16px);
   filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.14));
 }
 
@@ -355,7 +368,7 @@ a {
 }
 
 .brownfile:hover {
-  transform: translateY(-32px);
+  transform: translateY(-16px);
   filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.14));
 }
 
@@ -370,8 +383,10 @@ a {
 
 .files {
   position: relative;
-  height: calc(77.3vw + 240px);
-  margin-top: -120px;
+  width: 100%;
+  height: clamp(420px, 52vw, 620px);
+  margin-top: 0;
+  margin-bottom: -4px;
   overflow: visible;
 }
 
@@ -496,7 +511,16 @@ a {
 
   /* ----------- CLOCK MOBILE -------------- */
 
+  .redlines {
+    border-right: 4px solid #9c241f;
+    border-left: 4px solid #9c241f;
+    height: 70px;
+    padding: 0 20px;
+  }
+
   #countdown {
+    display: flex;
+    flex-direction: column;
     width: fit-content;
     margin: 0 auto;
     gap: 0.75rem;
@@ -506,8 +530,8 @@ a {
     gap: 0.75rem;
     display: flex;
     flex-direction: row;
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
   }
 
   #countdown li {
@@ -720,6 +744,7 @@ a {
   }
 
   /* RED LINES */
+
   .RedLine {
     width: 5px;
     height: clamp(70px, 9vw, 100px);
