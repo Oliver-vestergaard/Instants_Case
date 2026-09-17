@@ -262,6 +262,8 @@ a {
   align-items: center;
 }
 
+/* ----------- FILES ------------- */
+
 .files_title {
   margin: var(--L) var(--S) var(--M);
   color: var(--text-color);
@@ -269,25 +271,94 @@ a {
 
 .yellowfile {
   z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  transform-origin: center top;
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.12));
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.yellowfile:hover {
+  transform: translateY(-32px);
+  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.14));
 }
 
 .redfile {
   z-index: 3;
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  height: auto;
+  transform-origin: center top;
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.12));
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.redfile:hover {
+  transform: translateY(-32px);
+  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.14));
 }
 
 .bluefile {
   z-index: 4;
+  position: absolute;
+  left: 0;
+  top: 160px;
+  width: 100%;
+  height: auto;
+  transform-origin: center top;
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.12));
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.bluefile:hover {
+  transform: translateY(-32px);
+  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.14));
 }
 
 .brownfile {
   z-index: 5;
+  position: absolute;
+  left: 0;
+  top: 240px;
+  width: 100%;
+  height: auto;
+  transform-origin: center top;
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.12));
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.brownfile:hover {
+  transform: translateY(-32px);
+  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.14));
+}
+
+.imginfile {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    max-width: 100px;
+  }
 }
 
 .files {
   position: relative;
   height: calc(77.3vw + 240px);
   margin-top: -120px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .files img {
