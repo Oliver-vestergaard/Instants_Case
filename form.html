@@ -59,7 +59,7 @@
 
 
 
-        </div>
+
 
 
 
@@ -68,7 +68,7 @@
             <div class="formHeadline">
                 <div>
 
-                    <p>Klar til at dele dit instant foto? <br>Sådan deltager du!</p>
+                    <p>Klar til at dele dit instant? <br>Sådan deltager du!</p>
 
                     <p class="Italic-Text">Deadline: 11. okt</p>
                 </div>
@@ -207,7 +207,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <p>Obs du skal være 18 år for at deltage</p>
+                            <p>Obs: du skal være 18 år for at deltage!</p>
                         </div>
 
                     </div>
@@ -216,12 +216,12 @@
             <div class="form-row">
                 <div class="field">
                     <label for="first">Navn</label>
-                    <input type="text" id="first" placeholder="Stefan">
+                    <input type="text" id="first" placeholder="Stefan" required>
                 </div>
 
                 <div class="field">
                     <label>Email</label>
-                    <input type="email" id="email" placeholder="Stefan@gmail.com">
+                    <input type="email" id="email" placeholder="Stefan@gmail.com" required>
                 </div>
             </div>
 
@@ -229,7 +229,7 @@
                 <div class="field">
 
                     <label for="image-upload">Upload billede</label>
-                    <input type="file" id="image-upload" accept="image/*">
+                    <input type="file" id="image-upload" accept="image/*" required>
 
                 </div>
 
@@ -238,7 +238,7 @@
 
                 <div class="field">
                     <label for="Titel">Titel</label>
-                    <input type="text" id="Titel" placeholder="Titlen på dit billede">
+                    <input type="text" id="Titel" placeholder="Titlen på dit billede" required>
                 </div>
 
 
@@ -257,6 +257,11 @@
                 <a href="agreements.html" target="_blank" rel="noopener noreferrer">
                     vilkår og betingelser
                 </a>
+
+            </label>
+            <label class="Form_Checkbox">
+                <input type="checkbox" name="terms" required>
+                Jeg er fyldt 18 år
 
             </label>
 
