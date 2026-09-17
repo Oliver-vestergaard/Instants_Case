@@ -119,7 +119,7 @@ header {
 /*********** LOGO ***********/
 
 .Wordmark_logo {
-  width: 75px;
+  width: 110px;
   height: auto;
 }
 
@@ -131,7 +131,6 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 15px;
 }
 
 .logo {
@@ -217,18 +216,21 @@ nav.active .menu a:hover {
 }
 
 /*********** FOOTER **********/
-
 footer {
+  position: relative;
+
   margin: 0;
   padding: 0;
   width: 100%;
 
   background-image: url(../Img/Backgrounds/FooterBackgroundNEW.webp);
-
-  background-color: var(--background-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, var(--background-color) 10%, var(--background-color) 100%);
+
+  mask-image: linear-gradient(to bottom, transparent 0%, var(--background-color) 10%, var(--background-color) 100%);
 }
 
 .Footer_logo img {
@@ -307,7 +309,7 @@ footer {
   }
 
   .Wordmark_logo {
-    width: 130px;
+    width: 165px;
     height: auto;
   }
 

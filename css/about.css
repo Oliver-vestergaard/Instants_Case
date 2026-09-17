@@ -10,11 +10,16 @@
   max-width: none;
 }
 
+.HvemErVi {
+  margin-left: 1rem;
+}
 /*********** FRIDGE *********/
 
 .Fridge {
   position: relative;
-  width: 100%;
+  width: 98%;
+  transform: rotate(0.7deg);
+  margin: 0 auto;
 }
 
 .FridgeBackground {
@@ -38,12 +43,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  margin: 1rem 1rem 4rem 1rem;
+  margin: 1rem 1rem 2rem 1rem;
 }
 
 .FridgeJudge img {
   width: min(95px, 24vw);
   height: auto;
+  justify-self: center;
 }
 
 /*********** POLAROID ROTATION *********/
@@ -76,7 +82,6 @@
 /********* SPONSOR ************/
 
 .sponsor {
-  margin-top: 2rem;
   margin-left: 10px;
 }
 
@@ -90,15 +95,12 @@
   font-weight: bold;
 }
 
-.SponsorDesk {
-  display: none;
-}
-
 /********** TABLET **********/
 
 @media (min-width: 600px) {
   .FridgeJudge {
     grid-template-columns: 1fr 1fr;
+    margin: 1rem 1rem 3rem 1rem;
   }
 
   .FridgeJudge img {
@@ -118,8 +120,12 @@
 /********** DESKTOP **********/
 
 @media (min-width: 801px) {
+  .HvemErVi {
+    margin-left: 3rem;
+  }
+
   .FridgeContent {
-    margin-top: 13rem;
+    margin-top: 10rem;
     padding: 1rem;
   }
 
@@ -164,14 +170,13 @@
   }
 
   /* Sponsor */
-
-  .SponsorDesk {
-    display: block;
-    margin-left: 3rem;
-    margin-top: 15rem;
+  .sponsor {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
   }
 
-  .sponsor {
-    display: none;
+  .Sponsorlogo {
+    margin: 1rem auto 0;
   }
 }
