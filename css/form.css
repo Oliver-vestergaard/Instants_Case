@@ -1,9 +1,20 @@
 body {
-  background-size: cover;
-  background-image: url(../Img/Backgrounds/deldineinstantsbg.webp);
+  position: relative;
+  background-color: var(--background-color);
 }
 
-/****** TEXT *****/
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url(../Img/Backgrounds/FormTryout.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/****** TEXT ******/
 
 h1 {
   margin-top: 2rem;
@@ -14,12 +25,49 @@ h1 {
 }
 
 .info_list {
-  margin-left: 1rem;
   margin-top: 2rem;
+  margin-left: 1rem;
 }
 
 .info_list li {
   margin-bottom: 1rem;
+}
+
+/******** SVG INFO ********/
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+.InfoContainer {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.InfoSvg {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.InfoSvg svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Første SVG er høj og smal */
+.InfoSvg .svgnr1 {
+  width: 40%;
+}
+
+.InfoContainer p {
+  margin: 0 auto;
+  text-align: center;
 }
 
 /******** FORM *********/
@@ -27,12 +75,10 @@ h1 {
 .form {
   width: 100%;
   max-width: 1050px;
-  font-family: "Karla", sans-serif;
+  margin: 5rem auto 10rem;
   background-color: transparent;
-  margin-top: 5rem;
-  margin: 0 auto;
-  margin-bottom: 10rem;
   color: var(--Yellow-color);
+  font-family: "Karla", sans-serif;
 }
 
 form input,
@@ -47,7 +93,7 @@ form label {
 }
 
 .formHeadline {
-  margin-bottom: 60px;
+  margin-bottom: 2rem;
 }
 
 .form-row {
@@ -55,19 +101,19 @@ form label {
 }
 
 .field {
-  padding: 8px 12px 45px;
-  border-top: 1px solid var(--Yellow-color);
   display: grid;
   grid-template-rows: 1fr 1fr;
+  padding: 8px 12px 45px;
+  border-top: 1px solid var(--Yellow-color);
 }
 
 label {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: bold;
-  font-size: 14px;
   margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 input {
@@ -75,9 +121,9 @@ input {
   border: none;
   outline: none;
   background: transparent;
+  color: var(--text-color);
   font-family: inherit;
   font-size: 16px;
-  color: var(--text-color);
 }
 
 input[type="checkbox"] {
@@ -92,32 +138,30 @@ input::placeholder {
 }
 
 input:focus {
+  color: var(--text-color);
   font-family: "Karla", sans-serif;
+  font-size: 1.125rem;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  font-size: 1.125rem;
-  color: var(--text-color);
 }
 
 .submit-button {
-  width: 100%;
-  margin-top: 30px;
-  padding: 20px;
-  border-radius: 16px;
+  display: block;
+  margin: 30px auto 0;
+  padding: 1.25rem 4rem;
   border: none;
-  background: #29736c;
-  color: #fff;
-
+  border-radius: 10px;
+  background: var(--Yellow-color);
+  color: var(--background-color);
   font-family: inherit;
-  font-weight: bold;
-  font-size: 30px;
-
   cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: fit-content;
 }
 
 .submit-button:hover {
-  background: #cd0d0d;
+  background: var(--cta-color);
 }
 
 .upload {
@@ -129,21 +173,20 @@ input:focus {
 #image-upload::file-selector-button {
   width: 30px;
   height: 30px;
-  background: transparent;
   border: 1px solid var(--text-color);
+  background: transparent;
   color: transparent;
   cursor: pointer;
 }
 
 textarea {
-  width: 50%;
+  width: 100%;
   min-height: 130px;
+  margin-top: -45px;
   resize: vertical;
-
   outline: 1px solid var(--Yellow-color);
   background: transparent;
   color: var(--Yellow-color);
-  margin-top: -45px;
 }
 
 textarea::placeholder {
@@ -155,13 +198,20 @@ textarea::placeholder {
   margin-bottom: 40px;
 }
 
+.Form_Checkbox {
+  font-size: 0.6rem;
+}
+
+.Form_Checkbox a {
+  font-size: 0.6rem;
+}
+
 /******* OVERLAY ********/
 
 .overlay-background {
   position: fixed;
   inset: 0;
   z-index: 999;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,9 +226,9 @@ textarea::placeholder {
 
 .overlay {
   align-items: center;
+  padding: 2rem;
   background-image: url(../Img/Backgrounds/takfordeltagelse.webp);
   background-size: cover;
-  padding: 2rem 2rem 2rem 2rem;
 }
 
 .overlay img {
@@ -194,14 +244,46 @@ textarea::placeholder {
 }
 
 #closeThankYou {
-  padding: 10px 50px 10px 50px;
-  background-color: var(--Yellow-color);
+  padding: 10px 50px;
   border: none;
   border-radius: 10px;
+  background-color: var(--Yellow-color);
 }
 
 /********** DESKTOP **********/
+
 @media (min-width: 801px) {
+  /******** TEXT ********/
+
+  h1 {
+    margin-top: 2rem;
+    margin-left: 6rem;
+  }
+
+  .info {
+    margin-top: 2rem;
+    margin-left: 10rem;
+  }
+
+  /******** SVG INFO ********/
+
+  .Info {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .InfoContainer {
+    flex: 1;
+    width: auto;
+    margin-top: 0rem;
+  }
+
+  .InfoSvg {
+    width: 100%;
+  }
+
+  /******** FORM ********/
+
   .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -212,40 +294,35 @@ textarea::placeholder {
     border-left: 1px solid var(--Yellow-color);
   }
 
-  .Form_Checkbox a {
-    font-size: 14px;
-  }
-
   .Form_Checkbox {
     padding-left: 12px;
   }
-  /****** TEXT *****/
 
-  h1 {
-    margin-top: 2rem;
-    margin-left: 5rem;
+  .Form_Checkbox a {
+    font-size: 1rem;
   }
 
-  .info {
-    margin-top: 2rem;
-    margin-left: 5rem;
+  .Form_Checkbox {
+    font-size: 1rem;
   }
 
-  .info_list {
-    margin-left: 1rem;
+  textarea {
+    width: 50%;
   }
 
-  .info_list li {
-    margin-bottom: 1rem;
+  .submit-button {
+    margin: 30px 0 0;
   }
-  /*********** OVERLAY ***********/
+
+  /******** OVERLAY ********/
+
   .overlay {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 75%;
     margin: 0 auto;
+    padding: 2rem 0 2rem 2rem;
     align-items: center;
-    padding: 2rem 0rem 2rem 2rem;
   }
 
   .overlay img {
@@ -257,5 +334,17 @@ textarea::placeholder {
 
   .Overlay_content {
     transform: translateY(-20px);
+  }
+
+  /******** OTHER ********/
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .formHeadline {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
   }
 }

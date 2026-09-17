@@ -197,9 +197,8 @@ nav.active .menu a {
 }
 
 nav.active .menu a:hover {
-  color: white;
-  text-decoration: overline;
-  text-decoration-thickness: 1px;
+  color: var(--cta-color);
+
   transition: 0.3s ease-in;
 }
 
@@ -339,9 +338,8 @@ footer {
   }
 
   nav.active .menu a:hover {
-    color: white;
-    text-decoration: overline;
-    text-decoration-thickness: 3px;
+    color: var(--cta-color);
+
     transition: 0.3s ease-in;
   }
 
