@@ -18,6 +18,9 @@ body {
     margin-top: 1.5em;
   }
 }
+.nominerede_section {
+  margin-bottom: 3rem;
+}
 
 /* Mobile */
 @media (max-width: 800px) {
