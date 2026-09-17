@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+.Dommerne p {
+  max-width: none;
+}
+
 /*********** FRIDGE *********/
 
 .Fridge {
@@ -115,7 +119,7 @@
 
 @media (min-width: 801px) {
   .FridgeContent {
-    margin-top: 7rem;
+    margin-top: 13rem;
     padding: 1rem;
   }
 
@@ -164,7 +168,7 @@
   .SponsorDesk {
     display: block;
     margin-left: 3rem;
-    margin-top: 12rem;
+    margin-top: 15rem;
   }
 
   .sponsor {
