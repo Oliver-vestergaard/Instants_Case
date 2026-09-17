@@ -574,4 +574,77 @@ a {
   .files .brownfile {
     top: 600px;
   }
+
+  /**** CLOCK ******/
+
+  /* CONTAINER */
+  .container {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* COUNTDOWN */
+  #countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  /* RED LINES */
+  .RedLine {
+    width: 2px;
+    height: 100px;
+    background-color: red;
+    flex-shrink: 0;
+  }
+
+  /* NUMBERS */
+  #countdown ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+}
+
+/********** MOBILE **********/
+
+@media all and (max-width: 801px) {
+  #countdown {
+    gap: 0.5rem;
+  }
+
+  #countdown ul {
+    gap: 0;
+  }
+
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+    padding: 0.5em;
+  }
+
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
+  }
+
+  .RedLine {
+    width: 2px;
+    height: 70px;
+  }
 }
