@@ -335,6 +335,27 @@ a {
     margin-inline: var(--S);
   }
 
+  .timeline_outro {
+    margin-top: var(--L);
+  }
+
+  .timeline_wrapper {
+    margin-top: var(--L);
+  }
+
+  .what_is_flex {
+    margin-top: var(--L);
+    margin-bottom: var(--L);
+  }
+
+  .howto_bigflex {
+    padding-top: var(--M);
+  }
+
+  .timeline {
+    padding-top: var(--L);
+  }
+
   .infographic_1,
   .infographic_2 {
     display: flex;
