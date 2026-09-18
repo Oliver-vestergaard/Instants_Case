@@ -43,6 +43,10 @@ a {
   max-width: fit-content;
 }
 
+.button:hover {
+  background: var(--cta-color);
+}
+
 /* -------------------------------- */
 
 .hero_text_button {
@@ -224,12 +228,7 @@ a {
   min-height: 200px;
   padding: 35px 40px;
   background-color: #f7f2e8;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0px,
-    transparent 31px,
-    #b8c7d1 32px
-  );
+  background-image: repeating-linear-gradient(to bottom, transparent 0px, transparent 31px, #b8c7d1 32px);
   box-sizing: border-box;
 }
 
