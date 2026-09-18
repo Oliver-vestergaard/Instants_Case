@@ -1,6 +1,17 @@
 body {
+  position: relative;
+  background-color: var(--background-color);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url(../Img/Backgrounds/FormTryout.webp);
   background-size: cover;
-  background-image: url(../Img/Backgrounds/deldineinstantsbg.webp);
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
 }
 /* Generel styling */
 .nominerede_card {
