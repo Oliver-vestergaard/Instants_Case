@@ -1,6 +1,17 @@
 body {
+  position: relative;
+  background-color: var(--background-color);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url(../Img/Backgrounds/FormTryout.webp);
   background-size: cover;
-  background-image: url(../Img/Backgrounds/deldineinstantsbg.webp);
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
 }
 /* Generel styling */
 .nominerede_card {
@@ -66,6 +77,15 @@ body {
   .winner_card > p:last-child {
     order: 6;
   }
+  .instantUgenInfografik_section {
+    margin-top: 3rem;
+    display: grid;
+    row-gap: 1.5em;
+    video {
+      width: 100%;
+      padding: 1em 1.5em;
+    }
+  }
 }
 
 /* Desktop */
@@ -127,5 +147,17 @@ body {
   .winner_card > p:last-child {
     grid-area: description;
     margin: 0;
+  }
+  .instantUgenInfografik_section {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5em;
+    h2 {
+      grid-column: 1/-1;
+    }
+    video {
+      width: 100%;
+    }
   }
 }
